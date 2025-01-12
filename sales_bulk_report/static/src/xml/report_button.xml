@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+   <t t-extend="ListView.buttons" t-name="button_near_create.buttons">
+       <t t-jquery="button.o_list_button_add" t-operation="after">
+           <button type="button" class="oe_highlights button_clicks" id="button_clicks" groups="sales_bulk_report.group_download_reports">
+               Download Report
+           </button>
+           <div class="dropdown_view" id="dropdown_view" style="display:none">
+               <select id="po_time_period" class="form-control" name="po_time_period" value="last_month" >
+                   <option value=""></option>
+                   <option value="this_week">Current Week</option>
+                   <option value="last_week">Past Week</option>
+                   <option value="this_month">Current Month</option>
+                   <option value="last_month" selected="">Past Month</option>
+                   <option value="this_year">Current Year</option>
+                   <option value="last_year">Last Year</option>
+                   <option value="custom_date">Custom Date</option>
+               </select>
+           </div>
+           <div id="custom_date_selection" style="display:none">
+               <input type="date" id="date_from" class="form-control" name="date_from"/>
+           </div>
+           <div id="custom_date_to_selection" style="display:none">
+               <input type="date" id="date_to" class="form-control" name="date_to"/>
+           </div>
+           <div id="download-close" style="display:none">
+                   <button id="download-po-report" class="btn btn-success fa fa-download "/>
+                   <button id="close-selection" class="btn btn-danger">Close</button>
+           </div>
+       </t>
+   </t>
+</templates>
